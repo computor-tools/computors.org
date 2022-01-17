@@ -19,8 +19,10 @@ const getFiles = async function* (dir, current) {
           })
           .indexOf(res.split('docs/')[1]) === -1
       ) {
-        const { name } = parse(res.split('docs/')[1]);
-        yield { file: res.split('docs/')[1], title: name.replaceAll(/-/g, ' ') };
+        const { name, ext } = parse(res.split('docs/')[1]);
+        if (ext === '.md' || ext === '.mdx') {
+          yield { file: res.split('docs/')[1], title: name.replaceAll(/-/g, ' ') };
+        }
       }
     }
   }
