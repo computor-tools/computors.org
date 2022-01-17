@@ -1,4 +1,4 @@
-import React, { lazy, useRef } from 'react';
+import React, { lazy, useEffect, useRef, useState } from 'react';
 import { MDXProvider } from '@mdx-js/react';
 import Aside from './Aside';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
@@ -202,6 +202,58 @@ const Main = function ({ category, file, url, ext, i, nonEditable, prevRoute, ne
   const autoScrollTimeout = useRef();
 
   const components = {
+    img: function Img(props) {
+      const [src, setSrc] = useState();
+      useEffect(
+        function () {
+          const parts = props.src.slice('/docs'.length, props.src.lastIndexOf('.')).split('/');
+          const ext2 = props.src.slice(props.src.lastIndexOf('.') + 1);
+
+          const load = function () {
+            switch (parts.length) {
+              case 1:
+                return import(`../../docs${parts[0]}.${ext2}`);
+              case 2:
+                return import(`../../docs${parts[0]}/${parts[1]}.${ext2}`);
+              case 3:
+                return import(`../../docs${parts[0]}/${parts[1]}/${parts[2]}.${ext2}`);
+              case 4:
+                return import(`../../docs${parts[0]}/${parts[1]}/${parts[2]}/${parts[3]}.${ext2}`);
+              case 5:
+                return import(
+                  `../../docs${parts[0]}/${parts[1]}/${parts[2]}/${parts[3]}/${parts[4]}.${ext2}`
+                );
+              case 6:
+                return import(
+                  `../../docs${parts[0]}/${parts[1]}/${parts[2]}/${parts[3]}/${parts[4]}/${parts[5]}.${ext2}`
+                );
+              case 7:
+                return import(
+                  `../../docs${parts[0]}/${parts[1]}/${parts[2]}/${parts[3]}/${parts[4]}/${parts[5]}/${parts[6]}.${ext2}`
+                );
+              case 8:
+                return import(
+                  `../../docs${parts[0]}/${parts[1]}/${parts[2]}/${parts[3]}/${parts[4]}/${parts[5]}/${parts[6]}/${parts[7]}.${ext2}`
+                );
+              case 9:
+                return import(
+                  `../../docs${parts[0]}/${parts[1]}/${parts[2]}/${parts[3]}/${parts[4]}/${parts[5]}/${parts[6]}/${parts[7]}/${parts[8]}.${ext2}`
+                );
+              case 10:
+                return import(
+                  `../../docs${parts[0]}/${parts[1]}/${parts[2]}/${parts[3]}/${parts[4]}/${parts[5]}/${parts[6]}/${parts[7]}/${parts[8]}/${parts[9]}.${ext2}`
+                );
+            }
+          };
+
+          load().then(function (image) {
+            setSrc(image.default);
+          });
+        },
+        [props.src]
+      );
+      return <img {...props} src={src} />;
+    },
     a: function (props) {
       let hostname;
       try {
