@@ -1,0 +1,55 @@
+[
+  {
+    "file": "Protocol/Introduction.md",
+    "title": "Introduction"
+  },
+  {
+    "file": "Protocol/Glossary.md",
+    "title": "Glossary"
+  },
+  {
+    "file": "Protocol/Computors.md",
+    "title": "Computors"
+  },
+  {
+    "file": "Protocol/Admin.md",
+    "title": "Admin"
+  },
+  {
+    "file": "Mining/Introduction.md",
+    "title": "Introduction"
+  },
+  {
+    "file": "Mining/How-to-mine.md",
+    "title": "How to mine"
+  },
+  {
+    "file": "Mining/Setups.md",
+    "title": "Setups"
+  },
+  {
+    "file": "Mining/ANN-visualizer.md",
+    "title": "ANN visualizer"
+  },
+  {
+    "file": "Computing/Introduction.md",
+    "title": "Introduction"
+  },
+  {
+    "file": "Computing/Computor-backend.md",
+    "title": "Computor backend"
+  },
+  {
+    "file": "Computing/Setups.md",
+    "title": "Setups"
+  },
+  {
+    "file": "Protocol/Consensus.md",
+    "title": "Consensus"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/computor-tools/qubic-js/master/README.md",
+    "file": "Building/JavaScript/Qubic-js.md",
+    "title": "qubic-js"
+  }
+]
