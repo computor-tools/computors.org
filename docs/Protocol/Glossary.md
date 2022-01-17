@@ -21,6 +21,8 @@ Interval of time between consecutive time changes. Ticks are divided into iterat
 ## Epoch 
 Interval of time between metastate changes. Epochs are divided into ticks.
 
+## Block
+
 ## Qubic
 A quorum-based computation.
 

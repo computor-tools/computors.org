@@ -9,14 +9,18 @@ Solutions to such problem have application in circuit design.
 
 Miners aquire energy as they increase their score by finding solutions which reduce the number of errors. A similar task is likely to be chosen after an unimprovable solution is found.
 
+Here is a visualization generated with [ANN-visualizer](https://github.com/computor-tools/ann-visualizer) of a neural network trained by Qubic miners:
+
+![](/docs/Mining/ann.png)
+
 ## Pools
 Computors will be [mining pool](/protocol/glossary#pool) operators. A pool operator pools computational resources of miners to be one of the 676 computors. The pool periodically splits a constant amount of [energy](/protocol/glossary#energy) among miners according to their score in a fee-less manner.
 
 ## Status of mining
 Mining software is distributed to miners by the one and only pool operator for now. Qubic is not ready yet and pool operator will transfer energy to miners later.
 
-## Hardware requirements
-Currently Qubic is mined on CPUs with [AVX-2](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#Advanced_Vector_Extensions_2) at least, AVX-512 provides additional boost. 
+## System requirements
+Currently Qubic is mined on CPUs with [AVX-2](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#Advanced_Vector_Extensions_2) at least, AVX-512 provides additional boost. Miner software is released for Windows only.
 
 ## Getting started
 To start mining, if you are interested, join the #qubic channel on [Syzygy Discord](https://discord.gg/2vDMR8m).
