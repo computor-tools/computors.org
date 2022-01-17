@@ -10,19 +10,19 @@ To get started please ensure that you pass this checklist:
 3. You a minimum of 4GB RAM.
 4. You have standard internet connection (ipv4 or ipv6).
 3. You are a member of `#qubic` channel on [Syzygy Discord](https://discord.gg/2vDMR8m), where copies of mining software are disseminated.
-4. You have downloaded latest [`Qiner.exe`](https://discord.com/channels/768887649540243497/768890555564163092/932349041340194886) and [`Identity generator`](https://discord.com/channels/768887649540243497/768890555564163092/928755561883914300) from pinned messages in #qubic channel.
+4. You have downloaded latest [Qiner.exe](https://discord.com/channels/768887649540243497/768890555564163092/932349041340194886) and [Identity generator](https://discord.com/channels/768887649540243497/768890555564163092/928755561883914300) from pinned messages in #qubic channel.
 
 ## Generate an identity
 
 Before launching the miner you need to create an [identity](/protocol/glossary#identity).
 Identity will be used as a command line argument passed to Qiner.exe.
 
-Open [`Identity generator`](https://discord.com/channels/768887649540243497/768890555564163092/928755561883914300) in your browser and enter a <u>**secret**</u> seed of _55 lowercase latin_ characters.
-Make sure to save your seed and keep it somewhere safe. All your [`energy`](/protocol/glossary#energy) will be gone if you lose it. After clicking "login" you should see your 70 uppercase characters long identity. Copy it and use it for the next step.
+Open [identity generator](https://discord.com/channels/768887649540243497/768890555564163092/928755561883914300) in your browser and enter a <u>_secret_</u> seed of _55 lowercase latin_ characters.
+Make sure to save your seed and keep it somewhere safe. All your [energy](/protocol/glossary#energy) will be gone if you lose it. After clicking "login" you should see your 70 uppercase characters long identity. Copy it and use it for the next step.
 
 ## Launch Qiner.exe
 
-Assuming you have downloaded [`Qiner.exe`](https://discord.com/channels/768887649540243497/768890555564163092/932349041340194886) in your Downloads folder, open command prompt and run:
+Assuming you have downloaded [Qiner.exe](https://discord.com/channels/768887649540243497/768890555564163092/932349041340194886) in your Downloads folder, open command prompt and run:
 ```
 cd Downloads
 Qiner.exe <Identity> <NumberOfThreads>

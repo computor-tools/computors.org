@@ -9,7 +9,7 @@ Solutions to such problem have application in circuit design.
 
 Miners aquire energy as they increase their score by finding solutions which reduce the number of errors. A similar task is likely to be chosen after an unimprovable solution is found.
 
-Here is a visualization generated with [ANN-visualizer](https://github.com/computor-tools/ann-visualizer) of a neural network trained by Qubic miners:
+Here is a visualization of a neural network trained by Qubic miners generated with [ANN-visualizer](https://github.com/computor-tools/ann-visualizer) :
 
 ![](/docs/Mining/ann.png)
 

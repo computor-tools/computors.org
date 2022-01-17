@@ -16,6 +16,10 @@
     "title": "Admin"
   },
   {
+    "file": "Protocol/Consensus.md",
+    "title": "Consensus"
+  },
+  {
     "file": "Mining/Introduction.md",
     "title": "Introduction"
   },
@@ -36,16 +40,8 @@
     "title": "Introduction"
   },
   {
-    "file": "Computing/Computor-backend.md",
-    "title": "Computor backend"
-  },
-  {
-    "file": "Computing/Setups.md",
-    "title": "Setups"
-  },
-  {
-    "file": "Protocol/Consensus.md",
-    "title": "Consensus"
+    "file": "Computing/Testing.md",
+    "title": "Testing"
   },
   {
     "url": "https://raw.githubusercontent.com/computor-tools/qubic-js/master/README.md",
