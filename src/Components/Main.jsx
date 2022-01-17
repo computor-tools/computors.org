@@ -48,16 +48,14 @@ const MainFooterLinkContainer = styled.div`
 const MainFooterLink = styled(Link)`
   flex: 1;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 5px 30px;
+  padding: 15px 30px;
   border-radius: 5px;
-  box-shadow: rgb(0, 0, 1) 0px 4px 10px;
-  background: #222;
   border: 1px solid #444;
   color: #fff;
   font-weight: bold;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  line-height: 160%;
 
   @media (max-width: 768px) {
     padding: 10px;
@@ -68,7 +66,6 @@ const MainFooterLink = styled(Link)`
     color: #00ffe9;
     border-color: #00ffe9;
     text-decoration: none;
-    background: #222;
   }
 
   div {
@@ -83,18 +80,29 @@ const Previous = styled(MainFooterLink)`
   align-self: flex-start;
 
   div {
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
+  }
+
+  div div {
+    margin: 0;
   }
 `;
 
 const Next = styled(MainFooterLink)`
   align-self: flex-end;
+  justify-content: flex-end;
   div {
+    margin-right: 20px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
+  }
+
+  div div {
+    margin: 0;
   }
 `;
 

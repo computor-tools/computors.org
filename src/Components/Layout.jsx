@@ -157,6 +157,11 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 4px;
   }
 
+  img {
+    max-width: 100%;
+    box-shadow: 0 2px 10px rgba(0,0,0,1);
+  }
+
   .category .category {
     margin-left: 5px;
     font-size: 14px;

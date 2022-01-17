@@ -43,7 +43,6 @@ const AsideContainer = styled.aside`
 
 const CopyLink = styled.div`
   padding: 0 10px;
-  border-left: 1px solid #444;
 
   button {
     font-size: 13px;
@@ -95,15 +94,14 @@ const Edit = styled.div`
     background-color: #222;
   }
   padding: 0 10px;
-  border-left: 1px solid #444;
 `;
 
 const Subnav = styled.nav`
   position: sticky;
   top: 125px;
   padding: 0 20px;
-  border-left: 1px solid #444;
   overflow-y: scroll;
+  scroll-behavior: smooth;
   max-height: calc(100vh - 125px);
 `;
 
@@ -152,9 +150,11 @@ const Aside = function ({ id, isMounted, nonEditable, path, autoScroll, autoScro
 
         if (window.innerHeight > 768) {
           setCurrentLink('#' + nodes2[0]?.href.split('#')[1]);
+          let previousOffset = 0;
           window.addEventListener(
             'scroll',
             (onScroll = function () {
+              const offset = window.pageYOffset || document.documentElement.scrollTop;
               const f = function () {
                 const node = nodes2
                   .map(function (node) {
@@ -177,8 +177,11 @@ const Aside = function ({ id, isMounted, nonEditable, path, autoScroll, autoScro
                   setCurrentLink('#' + id);
                   const el = document.querySelector('#link-' + id);
                   const rect = el.getBoundingClientRect();
-                  if (rect.top < 125 || rect.bottom > window.innerHeight) {
-                    navRef.current.scrollTo(0, el.offsetTop - navRef.current.offsetTop - 60);
+                  if (
+                    rect.top < navRef.current.getBoundingClientRect().top ||
+                    rect.bottom > window.innerHeight - navRef.current.getBoundingClientRect().top
+                  ) {
+                    navRef.current.scrollBy(0, offset > previousOffset ? 200 : -200);
                   }
                 }
               };
@@ -187,6 +190,7 @@ const Aside = function ({ id, isMounted, nonEditable, path, autoScroll, autoScro
               } else {
                 setTimeout(f, 1000);
               }
+              previousOffset = Math.max(0, offset);
             })
           );
         }
@@ -218,7 +222,11 @@ const Aside = function ({ id, isMounted, nonEditable, path, autoScroll, autoScro
 
         {!nonEditable && (
           <Edit>
-            <a href={`https://github.com/computor-tools/computors.org/edit/master/docs${path}.md`}>
+            <a
+              href={`https://github.com/computor-tools/computors.org/edit/master/docs${path}.md`}
+              target="_blank"
+              rel="noreferrer"
+            >
               <GitHubIcon fontSize="inherit" />
               <span>Edit on GitHub</span>
             </a>
