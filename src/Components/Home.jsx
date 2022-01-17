@@ -5,7 +5,13 @@ const Intro = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  min-height: calc(100vh - 58px - 69px);
+
+  @media (max-width: 768px) {
+    min-height: auto;
+    margin-bottom: 14px;
+  }
+
   p {
     max-width: 60vw;
     line-height: 160%;
@@ -13,6 +19,7 @@ const Intro = styled.section`
     font-family: Inconsolata, 'monospace';
     font-size: 35px;
     margin: 0;
+    padding: 0;
 
     @media (max-width: 768px) {
       text-align: left;
@@ -24,9 +31,9 @@ const Intro = styled.section`
 `;
 
 const IntroNav = styled.div`
-  margin-top: 20px;
+  margin-top: 60px;
   display: flex;
-  max-width: 90vw;
+  max-width: 80vw;
 
   @media (max-width: 768px) {
     margin-top: 20px;
@@ -38,16 +45,29 @@ const IntroNav = styled.div`
 
   section {
     flex: 1;
-    margin: 0 10px;
+    margin: 0 40px;
     padding: 20px;
-    //border: 4px solid #222;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.3s;
+
+    &:nth-child(2n) {
+      transform: scale(1.05);
+      &:hover {
+        transform: scale(1.15);
+      }
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
     @media (max-width: 768px) {
-      margin: 0;
+      margin: 8px 14px;
       padding: 0;
+      transform: scale(1) !important;
     }
   }
 
@@ -56,6 +76,12 @@ const IntroNav = styled.div`
     font-size: 35px;
     text-align: center;
     font-family: Inconsolata, 'monospace';
+
+    @media (max-width: 768px) {
+      font-size: 25px;
+      text-align: left;
+      padding: 0 14px;
+    }
   }
 
   p {
@@ -109,15 +135,12 @@ const IntroLink = styled(Link)`
 const Home = function () {
   return (
     <Intro>
-      <em style={{ color: 'yellow' }}>(!) This website is under construction</em>
-      <br />
-      <br />
       <p>
         A knowledge base about Qubic,
         <br />a quorum-based computations protocol.
       </p>
       <IntroNav>
-        <section>
+        <section style={{ background: '#1c2b2a' }}>
           <div>
             <h2>Mine ⛏️</h2>
             <p>
@@ -127,7 +150,7 @@ const Home = function () {
           </div>
           <IntroLink to="/mining">Start mining</IntroLink>
         </section>
-        <section>
+        <section style={{ background: '#271c2b' }}>
           <div>
             <h2>Compute 🧮</h2>
             <p>
@@ -135,16 +158,18 @@ const Home = function () {
               according to the Qubic protocol.
             </p>
           </div>
-          <IntroLink to="" disabled background="rgb(255, 105, 255)" alt="Comming soon">
-            Start computing
+          <IntroLink to="/computing/testing" background="rgb(255, 105, 255)" alt="Comming soon">
+            Start testing
           </IntroLink>
         </section>
-        <section>
+        <section style={{ background: 'rgb(10, 29, 43)' }}>
           <div>
             <h2>Build 🛠</h2>
             <p>Build JavaScript programs interacting with Qubic protocol.</p>
           </div>
-          <IntroLink to="/building/javascript">Start building</IntroLink>
+          <IntroLink to="/building/javascript" background="rgb(0, 145, 255)">
+            Start building
+          </IntroLink>
         </section>
       </IntroNav>
     </Intro>

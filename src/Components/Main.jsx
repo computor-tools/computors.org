@@ -21,11 +21,13 @@ const MainContainer = styled.div`
 const MainContent = styled.div`
   width: calc(100vw - 550px - 4vw);
   padding: 0 2vw;
+  min-height: calc(100vh - 58px - 60px);
   box-sizing: border-box;
 
   @media (max-width: 768px) {
     width: calc(100vw - 28px);
     padding: 0;
+    margin-bottom: 20px;
   }
 
   a svg {
@@ -59,7 +61,6 @@ const MainFooterLink = styled(Link)`
 
   @media (max-width: 768px) {
     padding: 10px;
-    display: none;
   }
 
   &:hover {
@@ -70,7 +71,13 @@ const MainFooterLink = styled(Link)`
 
   div {
     @media (max-width: 768px) {
-      font-size: 12px;
+      font-size: 14px;
+    }
+  }
+
+  svg {
+    @media (max-width: 768px) {
+      transform: scale(0.8);
     }
   }
 `;
@@ -81,6 +88,9 @@ const Previous = styled(MainFooterLink)`
 
   div {
     margin-left: 20px;
+    @media (max-width: 768px) {
+      margin-left: 5px;
+    }
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -96,6 +106,9 @@ const Next = styled(MainFooterLink)`
   justify-content: flex-end;
   div {
     margin-right: 20px;
+    @media (max-width: 768px) {
+      margin-right: 5px;
+    }
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -111,6 +124,10 @@ const MainFooterLinkCategory = styled.div`
   font-size: 13px;
   text-decoration: none;
   font-weight: normal;
+
+  @media (max-width: 768px) {
+    font-size: 9px !important;
+  }
 `;
 
 const CopyCode = styled.button`

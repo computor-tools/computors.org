@@ -362,6 +362,14 @@ const Logo = styled.h1`
 const Footer = styled.footer`
   background: #222;
   padding: 20px 2vw;
+  height: 58px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 20px 14px;
+  }
 `;
 
 const Layout = function () {
@@ -457,9 +465,9 @@ const Layout = function () {
             </VerticalHeader>
             <Outlet />
           </Container>
-          <Footer>&copy; Computors.org Contributors</Footer>
         </>
       )}
+      <Footer>&copy; computors.org contributors</Footer>
     </>
   );
 };
