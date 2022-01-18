@@ -13,11 +13,11 @@ const Intro = styled.section`
   }
 
   p {
-    max-width: 60vw;
+    max-width: max(1000px, 85vw);
     line-height: 160%;
     text-align: center;
     font-family: Inconsolata, 'monospace';
-    font-size: 35px;
+    font-size: 40px;
     margin: 0;
     padding: 0;
 
@@ -31,9 +31,9 @@ const Intro = styled.section`
 `;
 
 const IntroNav = styled.div`
-  margin-top: 60px;
+  margin: 60px 0;
   display: flex;
-  max-width: 80vw;
+  max-width: max(1000px, 85vw);
 
   @media (max-width: 768px) {
     margin-top: 20px;
@@ -45,35 +45,46 @@ const IntroNav = styled.div`
 
   section {
     flex: 1;
-    margin: 0 40px;
-    padding: 20px;
+    margin: 0 25px;
+    padding: 40px 20px 20px 20px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.3s;
 
+    &:hover {
+      transform: scale(1.02);
+    }
+
     &:nth-child(2n) {
-      transform: scale(1.05);
+      transform: scale(1.1);
+
       &:hover {
-        transform: scale(1.15);
+        transform: scale(1.12);
       }
     }
 
-    &:hover {
-      transform: scale(1.1);
-    }
-
     @media (max-width: 768px) {
+      &:nth-child(2n) {
+        transform: scale(1);
+        &:hover {
+          transform: scale(1);
+        }
+      }
+
+      &:hover {
+        transform: scale(1);
+      }
       margin: 8px 14px;
-      padding: 0;
-      transform: scale(1) !important;
+      padding: 14px 0;
     }
   }
 
   h2 {
     font-weight: normal;
-    font-size: 35px;
+    font-size: 30px;
+    margin-top: 0;
     text-align: center;
     font-family: Inconsolata, 'monospace';
 
@@ -86,7 +97,7 @@ const IntroNav = styled.div`
 
   p {
     text-align: left;
-    font-size: 20px;
+    font-size: 18px;
     font-family: sans-serif;
 
     @media (max-width: 768px) {
@@ -97,7 +108,7 @@ const IntroNav = styled.div`
 `;
 
 const IntroLink = styled(Link)`
-  margin: 20px 0;
+  margin: 20px 0 0 0;
   padding: 10px 30px;
   background: #222;
   border-radius: 5px;
@@ -106,15 +117,14 @@ const IntroLink = styled(Link)`
   }};
   color: #121212;
   box-shadow: 0 4px 10px rgba(0, 0, 0.5);
-  transition: transform 0.3s;
-  font-size: 25px;
+  font-size: 20px;
   font-family: sans-serif;
   text-align: center;
   display: block;
   font-weight: bold;
 
   @media (max-width: 768px) {
-    margin: 20px 14px;
+    margin: 20px 14px 0 14px;
     width: calc(100% - 88px);
   }
 
@@ -140,7 +150,7 @@ const Home = function () {
         <br />a quorum-based computations protocol.
       </p>
       <IntroNav>
-        <section style={{ background: '#1c2b2a' }}>
+        <section style={{ background: 'linear-gradient(#2a4140, #1c2b2a)' }}>
           <div>
             <h2>Mine ⛏️</h2>
             <p>
@@ -150,7 +160,7 @@ const Home = function () {
           </div>
           <IntroLink to="/mining">Start mining</IntroLink>
         </section>
-        <section style={{ background: '#271c2b' }}>
+        <section style={{ background: 'linear-gradient(#422f4a, #271c2b)' }}>
           <div>
             <h2>Compute 🧮</h2>
             <p>
@@ -162,7 +172,7 @@ const Home = function () {
             Start testing
           </IntroLink>
         </section>
-        <section style={{ background: 'rgb(10, 29, 43)' }}>
+        <section style={{ background: 'linear-gradient(rgb(19, 55, 81), rgb(10, 29, 43)' }}>
           <div>
             <h2>Build 🛠</h2>
             <p>Build JavaScript programs interacting with Qubic protocol.</p>
