@@ -14,7 +14,7 @@ Here is a visualization of a neural network trained by Qubic miners generated wi
 ![](/docs/Mining/ann.png)
 
 ## Pools
-Computors will be [mining pool](/protocol/glossary#pool) operators. A pool operator pools computational resources of miners to be one of the 676 computors. The pool periodically splits a constant amount of [energy](/protocol/glossary#energy) among miners according to their score in a fee-less manner.
+Computors will be [mining pool](/protocol/glossary#pool) operators. A pool operator pools computational resources of miners to be one of the 676 computors. The pool periodically splits an amount of [energy](/protocol/glossary#energy) among miners according to their score in a fee-less manner.
 
 ## Status of mining
 Mining software is distributed to miners by the one and only pool operator for now. Qubic is not ready yet and pool operator will transfer energy to miners later.
