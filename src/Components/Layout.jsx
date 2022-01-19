@@ -51,6 +51,17 @@ const GlobalStyle = createGlobalStyle`
     background: #222;
     border-radius: 5px;
   }
+
+  blockquote.info {
+    background: #192b4d;
+    border-left-color: #4375d2;
+  }
+
+  blockquote.info:before {
+    content: 'ℹ️';
+    margin-right: 5px;
+  }
+
   blockquote p {
     margin: 0;
   }

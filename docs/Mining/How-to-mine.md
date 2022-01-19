@@ -1,5 +1,7 @@
 # Qubic mining guide
 
+<blockquote class="info">Currently mining has stopped and will resume later.</blockquote>
+
 This page will guide you on how to start Qubic mining.
 
 ## Prerequisites
