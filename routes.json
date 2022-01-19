@@ -44,6 +44,10 @@
     "title": "Testing"
   },
   {
+    "file": "Computing/Qomputor.md",
+    "title": "Qomputor"
+  },
+  {
     "url": "https://raw.githubusercontent.com/computor-tools/qubic-js/master/README.md",
     "file": "Building/JavaScript/Qubic-js.md",
     "title": "qubic-js"

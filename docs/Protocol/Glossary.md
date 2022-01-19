@@ -53,3 +53,6 @@ A set of miners providing solutions to resource tests of a computor.
 
 ## Proof-of-useful-work
 A proof that a certain, useful compution has been preformed.
+
+## Sources
+1. "Qubic internals" by Come-from-Beyond.
