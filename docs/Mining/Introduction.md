@@ -7,7 +7,7 @@ Unlike traditional [proof-of-work](https://en.wikipedia.org/wiki/Proof_of_work) 
 Currently Qubic miners compete on training an [artificial neural network](https://en.wikipedia.org/wiki/Artificial_neural_network). While mining method is applicable to problems of any computational complexity class, the chosen task at hand is division of two 9-trit numbers.
 Solutions to such problem have application in circuit design. 
 
-Miners aquire energy as they increase their score by finding solutions which reduce the number of errors. A similar task is likely to be chosen after an unimprovable solution is found.
+Miners aquire energy as they increase their score by finding solutions which reduce the number of errors or optimize the ANN after all errors have been eliminated. A similar task is likely to be chosen after an unimprovable solution is found.
 
 Here is a visualization of a neural network trained by Qubic miners generated with [ANN-visualizer](https://github.com/computor-tools/ann-visualizer) :
 
