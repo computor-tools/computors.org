@@ -7,7 +7,7 @@ This page will guide you on how to start Qubic mining.
 To get started please ensure that you pass this checklist:
 1. You have a **Windows OS**. Linux and OSX are not supported.
 2. You have a CPU with **AVX-2**.
-3. You a minimum of 4GB RAM.
+3. You have a minimum of 4GB RAM.
 4. You have standard internet connection (ipv4 or ipv6).
 3. You are a member of `#qubic` channel on [Syzygy Discord](https://discord.gg/2vDMR8m), where copies of mining software are disseminated.
 4. You have downloaded latest [Qiner.exe](https://discord.com/channels/768887649540243497/768890555564163092/932907473642348584) and [Identity generator](https://discord.com/channels/768887649540243497/768890555564163092/928755561883914300) from pinned messages in #qubic channel.
